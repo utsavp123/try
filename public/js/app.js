@@ -49,7 +49,7 @@ weatherApp.addEventListener('submit', (e) => {
         msg1.innerHTML = 'Loading...';
         msg2.innerHTML = '';
         msg3.innerHTML = '';
-        fetch(`http://localhost:3001/weather?name=${inputSer.value}`).then((res)=>{
+        fetch(`weather?name=${inputSer.value}`).then((res)=>{
             res.json().then((data) => {
                 if (data.error) {
                     msg1.innerHTML = 'ENTER OTHER SEARCH';

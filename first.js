@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const path = require('path')
 
 const app = express()
+
+const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, './public')
 const veiwChang = path.join(__dirname, './tamplates/views')
 const partial = path.join(__dirname, './tamplates/partials')
@@ -67,6 +69,6 @@ const forcast = (latitude, longitude, callBack) => {
         }
     })
 }
-app.listen(3001, () => {
-    console.log('Server is up on port 3001.')
+app.listen(port, () => {
+    console.log('Server is up on port' + port)
 })
