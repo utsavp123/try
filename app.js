@@ -7,7 +7,7 @@ const app = express()
 
 const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, './public')
-const veiwChang = path.join(__dirname, './tamplates/views')
+const veiwChang = path.join(__dirname, '/tamplates/views')
 const partial = path.join(__dirname, './tamplates/partials')
 app.set('view engine', 'hbs')
 app.set('views', veiwChang)
